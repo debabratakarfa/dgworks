@@ -29,9 +29,7 @@ class Deactivator {
 
 
 	/**
-	 * Short Description. (use period)
-	 *
-	 * Long Description.
+	 * Deactivation hooks trigger.
 	 *
 	 * @since    1.0.0
 	 */

@@ -1,9 +1,9 @@
 <?php
 
 /**
- * DGWorks CPT Registering
+ * DGWorks Form CPT Registering
  *
- *  @package DGWorks
+ * @package DGWorks
  */
 
 namespace DGWorks\Backend;
@@ -13,7 +13,7 @@ use \WP_Error as WP_Error;
 /**
  * Registering CPT.
  *
- * @since      0.0.1
+ * @since      1.0.0
  * @package    DGWorks
  * @subpackage DGWorks/app/classes/Backend
  * @author     Debabrata Karfa <im@deb.im>

@@ -28,11 +28,12 @@ class Activator {
 
 
 	/**
-	 * Short Description. (use period)
-	 *
-	 * Long Description.
+	 * Activation hooks trigger.
 	 *
 	 * @since    1.0.0
 	 */
-	public static function activate() {     }
+	public static function activate() {
+        // First load the init scripts in case any rewrite functionality is being loaded.
+        flush_rewrite_rules();
+    }
 }
