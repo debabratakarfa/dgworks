@@ -11,7 +11,6 @@ namespace DGWorks\App;
 use \WP_Error as WP_Error;
 use DGWorks\Core as Core;
 use DGWorks\Backend as Backend;
-use DGWorks\Frontend as Frontend;
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
@@ -48,11 +47,8 @@ function init() {
  */
 function DGWorks_init() {
 	check_composer_install();
-	load_api_classes();
 	load_core_classes();
-	load_cli_classes();
 	load_backend_classes();
-	load_frontend_classes();
 }
 
 /**
@@ -88,45 +84,9 @@ function load_core_classes() {
 }
 
 /**
- * Load CLI Custom classes from Classes CLI folder.
- *
- * @return void Loading pre-defined classes.
- */
-function load_cli_classes() { }
-
-/**
- * Load API Custom classes from Classes API folder.
- *
- * @return void Loading pre-defined classes.
- */
-function load_api_classes() { }
-
-/**
  * Load Backend Custom classes from Classes Backend folder.
  *
  * @return void Loading pre-defined classes.
  */
 function load_backend_classes() {
-	new Backend\Affiliate();
-	new Backend\Customer();
-	new Backend\CustomOrderStatus();
-	new Backend\DeliveryManager();
-	new Backend\Order_Info();
-	new Backend\StockManager();
-	new Backend\Reports\StockAudit();
-	new Backend\Reports\Tax();
-}
-
-/**
- * Load Frontend Custom classes from Classes Fronend folder.
- *
- * @return void Loading pre-defined classes.
- */
-function load_frontend_classes() {
-	new Frontend\Affiliate();
-	new Frontend\Coupons();
-	new Frontend\Styling\CartCheckout();
-	new Frontend\Styling\CustomerProfile();
-	new Frontend\Styling\ProductTabs();
-	new Frontend\Styling\Styling();
 }
