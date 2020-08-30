@@ -9,7 +9,7 @@
  *
  * @link              https://www.deb.im
  * @since             1.0.0
- * @package           Mgcore
+ * @package           DGWorks
  *
  * @wordpress-plugin
  * Plugin Name:       DGWorks Plugin

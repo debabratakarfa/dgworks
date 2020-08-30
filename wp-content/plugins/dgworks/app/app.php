@@ -3,7 +3,7 @@
 /**
  * Core plugin functionality.
  *
- * @package    Mgcore
+ * @package    DGWorks
  */
 
 namespace DGWorks\App;
@@ -28,8 +28,8 @@ function setup() {
 		return __NAMESPACE__ . "\\$function";
 	};
 	add_action( 'init', $n( 'init' ) );
-	add_action( 'mgcore_init', $n( 'mgcore_init' ), 10 );
-	do_action( 'mgcore_loaded' );
+	add_action( 'DGWorks_init', $n( 'DGWorks_init' ), 10 );
+	do_action( 'DGWorks_loaded' );
 }
 
 /**
@@ -38,15 +38,15 @@ function setup() {
  * @return void
  */
 function init() {
-	do_action( 'mgcore_init' );
+	do_action( 'DGWorks_init' );
 }
 
 /**
- * MGCoreInit Apps function
+ * DGWorksInit Apps function
  *
- * @return void Call function on MGCoreApps init.
+ * @return void Call function on DGWorksApps init.
  */
-function mgcore_init() {
+function DGWorks_init() {
 	check_composer_install();
 	load_api_classes();
 	load_core_classes();
@@ -65,8 +65,8 @@ function mgcore_init() {
  */
 function check_composer_install() {
 	if ( ! empty( shell_exec( 'composer --version' ) ) ) {
-		if ( ! file_exists( MGCORE_PATH . '/vendor/autoload.php' ) ) {
-			shell_exec( 'cd ' . MGCORE_PATH );
+		if ( ! file_exists( DGWorks_PATH . '/vendor/autoload.php' ) ) {
+			shell_exec( 'cd ' . DGWorks_PATH );
 			shell_exec( 'composer isntall' );
 			shell_exec( 'composer dump-autoload -o' );
 			return new WP_Error( 'composer-installed', __( 'Composer and components installed', 'nts' ) );

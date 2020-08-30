@@ -22,7 +22,7 @@
  * @link       https://www.deb.im
  * @since      1.0.0
  *
- * @package    Mgcore
+ * @package    DGWorks
  */
 
 // If uninstall not called from WordPress, then exit.
