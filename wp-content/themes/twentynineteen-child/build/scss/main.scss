@@ -3,13 +3,19 @@
  */
 @import "./reset.scss";
 @import "./variables.scss";
+@import "./modal.scss";
 @import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css");
 
 body {
   width: 100%;
   height: 100%;
   background-color: $bg-color;
   font-family: $font-family;
+}
+
+.hidden {
+  display: none;
 }
 
 .content-area {
@@ -35,6 +41,8 @@ body {
   background: #fafafa;
   box-shadow: 0px 4px 44px -1px rgba(0, 0, 0, 0.07);
   padding: 32px 64px;
+  width: 100%;
+  max-width: 974px;
 
   &__description {
     h2 {
@@ -83,7 +91,7 @@ body {
       box-sizing: content-box;
 
       &:placeholder-shown,
-      [type="date" i],
+      [type="date"i],
       option {
         font-family: $font-family;
         font-style: normal;
@@ -102,6 +110,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+
     .tos {
       &__link {
         font-family: $font-family;
@@ -111,6 +120,7 @@ body {
         color: #000000;
       }
     }
+
     .submit-btn {
       margin-top: 30px;
       background-color: #61a4d9;
@@ -124,9 +134,11 @@ body {
       text-align: center;
       color: #ffffff;
     }
+
     .bg {
       background-attachment: fixed;
       background-size: cover;
+
       img {
         //position: absolute;
         width: 200px;

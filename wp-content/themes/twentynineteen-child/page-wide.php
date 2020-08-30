@@ -24,16 +24,16 @@
                 <div id="primary" class="content-area">
                     <main id="main" class="content-wrapper">
                         <h1 class="title">SUBMIT YOUR APPLICATION</h1>
-                        <form class="form">
+                        <form id="formToCPT" class="form form-to-cpt">
                             <div class="form__description">
                                 <h2>Personal Information</h2>
                                 <p>Please fill in all mandatory fields</p>
                             </div>
                             <div class="form__content">
-                                <input id="first_name" aria-label="First Name" name="first_name" placeholder="* First Name" maxlength="255" size="8" value="">
-                                <input id="last_name" aria-label="Last Name" name="last_name" placeholder="* Last Name" maxlength="255" size="8" value="">
-                                <input id="email" aria-label="Email" name="email" placeholder="* Email" maxlength="255" size="8" value="">
-                                <input id="phonenumber" aria-label="Phone Number" name="phonenumber" placeholder="Phone Number" maxlength="255" size="8" value="">
+                                <input id="first_name" aria-label="First Name" name="first_name" placeholder="* First Name" value="" required>
+                                <input id="last_name" aria-label="Last Name" name="last_name" placeholder="* Last Name" value="" required>
+                                <input id="email" aria-label="Email" type="email" name="email" placeholder="* Email" value="" required>
+                                <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" id="phonenumber" aria-label="Phone Number" name="phonenumber" placeholder="Phone Number (000-000-0000)" value="">
                                 <select id="country" aria-label="Country" name="country" class="form-control">
                                     <option value="">Choose Country</option>
                                     <option value="Afghanistan">Afghanistan</option>
@@ -286,7 +286,7 @@
                             <div class="form__footer">
                                 <div>
                                     <div class="tos">
-                                        <input id="tos" type="checkbox">
+                                        <input id="tos" name="tos" type="checkbox">
                                         <label for="tos" >I have read and agree to the <a class="tos__link" href="#">Terms and Conditions</a> and the <a class="tos__link" href="#">Privacy Policy</a></label>
                                     </div>
                                     <div class="button">
@@ -299,6 +299,12 @@
                             </div>
                             <?php wp_nonce_field( 'form_submission_ajax_action', 'fsac_nonce_field' ); ?>
                         </form>
+
+                        <!-- Modal HTML embedded directly into document -->
+                        <div id="showmodalresponse" class="modal">
+                            <p></p>
+                        </div>
+
                     </main><!-- #main -->
                 </div><!-- #primary -->
             </div>

@@ -11,7 +11,6 @@ namespace DGWorks\App;
 use \WP_Error as WP_Error;
 use DGWorks\Core as Core;
 use DGWorks\Backend as Backend;
-use DGWorks\Frontend as Frontend;
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
@@ -49,7 +48,6 @@ function dgworks_init() {
 	check_composer_install();
 	load_core_classes();
 	load_backend_classes();
-	load_frontend_classes();
 }
 
 /**
@@ -90,13 +88,5 @@ function load_core_classes() {
  */
 function load_backend_classes() {
     new Backend\CPT();
-}
-
-/**
- * Load Frontend Custom classes from Classes Backend folder.
- *
- * @return void Loading pre-defined classes.
- */
-function load_frontend_classes() {
-    new Frontend\EnqueueScripts();
+    new Backend\Action();
 }
