@@ -69,7 +69,7 @@ class CPT {
 			'can_export'          => true,
 			'has_archive'         => true,
 			'exclude_from_search' => false,
-			'publicly_queryable'  => true,
+			'publicly_queryable'  => false,
 			'capability_type'     => 'page',
 		);
 
