@@ -26,7 +26,6 @@ use \WP_Error as WP_Error;
  */
 class Activator {
 
-
 	/**
 	 * Activation hooks trigger.
 	 *
@@ -36,4 +35,5 @@ class Activator {
         // First load the init scripts in case any rewrite functionality is being loaded.
         flush_rewrite_rules();
     }
+
 }

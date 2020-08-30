@@ -57,7 +57,7 @@ class CPT {
 			'description'         => __( 'DGWorks vote for content', 'dgworks' ),
 			'labels'              => $labels,
 			// Features this CPT supports in Post Editor.
-			'supports'            => array( 'title', 'author', 'thumbnail', 'revisions' ),
+			'supports'            => array( 'title', 'author', 'thumbnail', 'revisions', 'custom-fields' ),
 			'taxonomies'          => array( '' ),
 			'hierarchical'        => false,
 			'public'              => true,
