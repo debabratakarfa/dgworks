@@ -297,6 +297,7 @@
                                     <span class="bg"><img src=<?php echo TN_CHILD_PATH . "/images/bgimage.svg" ?> alt="Form Background Image"></span>
                                 </div>
                             </div>
+                            <?php wp_nonce_field( 'form_submission_ajax_action', 'fsac_nonce_field' ); ?>
                         </form>
                     </main><!-- #main -->
                 </div><!-- #primary -->
